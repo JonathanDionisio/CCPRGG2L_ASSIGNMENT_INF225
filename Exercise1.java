@@ -20,7 +20,7 @@ public class App {
         String website = scan.nextLine();
 
         // Provide regex pattern
-        pattern = Pattern.compile("");
+        pattern = Pattern.compile("^www\\.[a-zA-Z0-9]+\\.com$");
 
         match = pattern.matcher(website);
 
@@ -41,7 +41,7 @@ public class App {
         String time = scan.nextLine();
 
         // Provide regex pattern
-        pattern = Pattern.compile("");
+        pattern = Pattern.compile("^([0-1]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$");
 
         match = pattern.matcher(time);
 
@@ -67,13 +67,13 @@ public class App {
         String myfiles = "myfile.txt, thesis.xlsx, this is not a file, picture.jpg, selfie.png";
 
         // Provide regex pattern
-        pattern = Pattern.compile("");
+        pattern = Pattern.compile("(myfile.txt)|(thesis.xlsx)|(picture.jpg)|(selfie.png)");
         match = pattern.matcher(myfiles);
 
         boolean found = false;
 
         while (match.find()) {
-            // System.out.println("I found the text " + match.group());
+             System.out.println("I found the text " + match.group());
             found = true;
         }
         if (!found) {
@@ -93,7 +93,7 @@ public class App {
         String password = scan.nextLine();
 
         // Provide the pattern
-        pattern = Pattern.compile("");
+        pattern = Pattern.compile("^(?=.*[$@!#*])(?!.*[ELlIZR]).{10,}$");
 
         match = pattern.matcher(password);
 
@@ -113,7 +113,7 @@ public class App {
         // Make all phone numbers uniform by making them all start with +63
 
         // Provide the regex pattern
-        phonenumbers = phonenumbers.replaceAll("", "");
+        phonenumbers = phonenumbers.replaceAll("^(\\+639[0-9]{9}) ");
 
         System.out.println(phonenumbers);
 

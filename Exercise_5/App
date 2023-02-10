@@ -1,0 +1,41 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        Person Me = new Person();
+
+        // The name property cannot be accessed outside of the Person class.
+        // Me.name;
+
+        Me.setName("Elizer");
+
+        String myName = Me.getName();
+
+        System.out.println("My name is " + myName);
+
+
+
+        Me.setCcnumber(87821313);
+
+        int newCcnumber =  Me.getCcnumber();
+
+        System.out.println("My cc number is " + newCcnumber);
+
+
+    
+
+
+    //=================================
+    Son me = new Son();
+    System.out.println("My famiy name is " + me.surname);
+
+    me.Showlove();
+
+    Daughter jes = new Daughter();
+    System.out.println("My sister's surname is " + jes.surname);
+
+
+
+
+    }
+
+}
